@@ -1,0 +1,42 @@
+<ng-container *ngIf="product.length !=0">
+    <div class="w-screen h-screen">
+        <div class="text-center w-screen h-screen bg-white/50 absolute">
+            <table class=" table-fixed w-screen">
+             <thead>
+                <tr class="text-red-950">
+                    <th>Sr.NO</th>
+                    <th>Product Name</th>
+                    <th>Product Image</th>
+                    <th>Decription</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr class="text-center" *ngFor="let item of product; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{item.title}}</td>
+                    <td><img class="mix-blend-darken" src="{{item.image}}" alt=""></td>
+                    <td>{{item.decription}}</td>
+                    <th>${{item.price}}</th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="w-14 h-6 bg-red-500 text-xs font-mono hover:text-red-500 hover:bg-black rounded-xl" (click)="remove(item)">Remove</button></th>
+                    
+                    
+                </tr>
+             </tbody>
+            </table>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="product.length == 0">
+    <div class="h-screen w-screen bg-green-700 flex items-center justify-center">
+        <img src="./assets/empty cart.png" alt="">
+    </div>
+</ng-container>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,37 @@
+<!-- <p class="text-red-600">real1 works!</p> -->
+
+<div class="w-screen h-[80px] bg-gradient-to-tr from-black to-slate-600 relative ">
+
+    <div class="w-screen h-[50%]  flex justify-center items-center bg-red-900 ">
+        <input type="text" class="w-[50%] pl-5 relative" placeholder="Try searching for Shirts, Pants, Mobile ">
+        <button class="justify-center items-center h-[25px] w-[30px] bg-black ml-[690px] absolute ">🔍</button>
+    </div>
+
+    <div class="flex text-white gap-56 ml-[100px]  p-2 ">
+        <p  class=" hover:text-[tomato] hover:cursor-pointer">Men</p>
+        <p class=" hover:text-[tomato] hover:cursor-pointer">Women</p>
+        <p class=" hover:text-[tomato] hover:cursor-pointer">Kids</p>
+        <p class=" hover:text-[tomato] hover:cursor-pointer">Electronics</p>
+
+    </div>
+
+<div routerLink="/cart" class="relative  w-[80px] flex flex-row">
+    
+           
+    <img  class="h-12  flex  mt-[-60px] ml-[1350px] hover:cursor-pointer " src="./assets/pngegg-8.png" alt="">
+    
+    <h1 class="absolute top-[-34px] left-[86.5rem] z-10 text-white">{{totalIttem}}</h1>
+        
+       <!-- <button class="w-[9rem] h-7 bg-fuchsia-700">Add
+        <a>
+            {{totalIttem}}
+        </a>
+       </button> -->
+    </div>
+
+
+
+</div>
+
+<app-slider></app-slider>
+<!-- <app-real-api></app-real-api> -->
